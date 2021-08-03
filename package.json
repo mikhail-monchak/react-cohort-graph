@@ -1,7 +1,7 @@
 {
-  "name": "react-cohort-graph",
-  "version": "2.0.0-beta.3",
-  "description": "Cohort Analysis Graph with ReactJS",
+  "name": "react-cohort-graph-2",
+  "version": "2.0.2",
+  "description": "Cohort Analysis Graph with ReactJS. Updated by Mikhail Monchak",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "module": "lib/index.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apxor/react-cohort-graph.git"
+    "url": "git+https://github.com/mikhail-monchak/react-cohort-graph"
   },
   "keywords": [
     "cohort",
@@ -32,12 +32,12 @@
     "react",
     "graph"
   ],
-  "author": "Jyothi Babu Araja <arajajyothibabu@gmail.com> (https://arajajyothibabu.github.io/)",
+  "author": "Jyothi Babu Araja <arajajyothibabu@gmail.com> (https://arajajyothibabu.github.io/); Mikhail Monchak <mikhail.monchak.work@gmail.com> (https://github.com/mikhail-monchak/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/apxor/react-cohort-graph/issues"
+    "url": "https://github.com/mikhail-monchak/react-cohort-graph/issues"
   },
-  "homepage": "https://github.com/apxor/react-cohort-graph#readme",
+  "homepage": "https://github.com/mikhail-monchak/react-cohort-graph#readme",
   "peerDependencies": {
     "react": ">=0.14",
     "react-dom": ">=0.14"

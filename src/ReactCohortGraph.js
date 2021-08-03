@@ -120,20 +120,21 @@ class ReactCohortGraph extends React.Component {
         const ScrollableTableContentStyles = scrollableTableContent(scrollableTableContentStyles);
         if(header && header.length > 0){
             return(
-                <div style={WrapperStyles}>
+                <div style={WrapperStyles} className='react-cohort-graph-wrapper'>
                     {
                         this.renderChildren({...this.props, ...this.state})
                     }
-                    <div style={TableStyles}>
-                        <div style={TableBodyStyles}>
-                            <div style={TableRowStyles}>
-                                <div style={FixedTablePartStyles}>
-                                    <div style={TableStyles}>
-                                        <div style={TableHeadingStyles}>
+                    <div style={TableStyles} className='rcg-container-1'>
+                        <div style={TableBodyStyles} className='rcg-container-2'>
+                            <div style={TableRowStyles} className='rcg-container-3'>
+                                <div style={FixedTablePartStyles} className='rcg-fixed-container-1'>
+                                    <div style={TableStyles} className='rcg-fixed-container-2'>
+                                        <div style={TableHeadingStyles} className='rcg-fixed-header-container'>
                                             {
                                                 header.map((headerCell, i) =>
                                                     this.isFixed(i) &&
                                                     <HeaderCell
+                                                        className={`rcg-fixed-header-cell-${i}`}
                                                         tableCellStyles={tableCellStyles}
                                                         headerLabelStyles={headerLabelStyles}
                                                         style={headerCellStyles}
@@ -147,14 +148,15 @@ class ReactCohortGraph extends React.Component {
                                                 )
                                             }
                                         </div>
-                                        <div style={TableBodyStyles}>
+                                        <div style={TableBodyStyles} className='rcg-fixed-body-container'>
                                             {
                                                 rows.map((row, j) =>
-                                                    <div style={TableRowStyles} key={"row" + j}>
+                                                    <div style={TableRowStyles} key={"row" + j} className={`rcg-fixed-body-row-${j}`}>
                                                         {
                                                             row.map((cell, k) =>
                                                                 this.isFixed(k) &&
                                                                 <BodyCell
+                                                                    className={`rcg-fixed-body-cell-${j}-${k}`}
                                                                     tableCellStyles={tableCellStyles}
                                                                     style={bodyCellStyles}
                                                                     key={"cell" + k}
@@ -171,14 +173,15 @@ class ReactCohortGraph extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div style={ScrollableTablePartStyles}>
-                                    <ScrollableContent scrollableTableContentStyles={scrollableTableContentStyles}>
-                                        <div style={TableStyles}>
-                                            <div style={TableHeadingStyles}>
+                                <div style={ScrollableTablePartStyles} className='rcg-scrollable-container-1'>
+                                    <ScrollableContent scrollableTableContentStyles={scrollableTableContentStyles} className='rcg-scrollable-container-2'>
+                                        <div style={TableStyles} className='rcg-scrollable-container-3'>
+                                            <div style={TableHeadingStyles} className='rcg-scrollable-header-container'>
                                                 {
                                                     header.map((headerCell, i) =>
                                                         !this.isFixed(i) &&
                                                         <HeaderCell
+                                                            className={`rcg-scrollable-header-cell-${i}`}
                                                             tableCellStyles={tableCellStyles}
                                                             style={headerCellStyles}
                                                             key={"header" + i}
@@ -191,14 +194,15 @@ class ReactCohortGraph extends React.Component {
                                                     )
                                                 }
                                             </div>
-                                            <div style={TableBodyStyles}>
+                                            <div style={TableBodyStyles} className='rcg-scrollable-body-container'>
                                                 {
                                                     rows.map((row, j) =>
-                                                        <div style={TableRowStyles} key={"row" + j}>
+                                                        <div style={TableRowStyles} key={"row" + j} className={`rcg-scrollable-body-row-${j}`}>
                                                             {
                                                                 row.map((cell, k) =>
                                                                     !this.isFixed(k) &&
                                                                     <BodyCell
+                                                                        className={`rcg-scrollable-body-cell-${j}-${k}`}
                                                                         tableCellStyles={tableCellStyles}
                                                                         style={bodyCellStyles}
                                                                         key={"cell" + k}

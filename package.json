@@ -1,6 +1,6 @@
 {
   "name": "react-cohort-graph-2",
-  "version": "2.0.2",
+  "version": "2.0.6",
   "description": "Cohort Analysis Graph with ReactJS. Updated by Mikhail Monchak",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

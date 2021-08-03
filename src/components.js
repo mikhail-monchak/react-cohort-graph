@@ -29,14 +29,15 @@ const renderHeader = props => { //header formatter
 };
 
 export const HeaderCell = (props) => (
-    <div style={{...tableCell(props.tableCellStyles), backgroundColor: props.color, ...props.style}}>
+    <div style={{...tableCell(props.tableCellStyles), backgroundColor: props.color, ...props.style}} className={props.className}>
         <p style={headerLabel(props.headerLabelStyles)}>{renderHeader(props)}</p>
         {props.showHeaderValues ? (<span style={headerValue({})}>{renderValue({...props, isHeaderValue: true})}</span>) : null}
     </div>
 );
 
 export const BodyCell = (props) => (
-    <div style={{...tableCell(props.tableCellStyles), backgroundColor: props.color, ...props.style}} title={`Out of ${props.total} on ${props.valueFor}`}>
+    <div style={{...tableCell(props.tableCellStyles), backgroundColor: props.color, ...props.style}} title={`Out of ${props.total} on ${props.valueFor}`}
+        className={props.className}>
         {renderValue(props)}
     </div>
 );
@@ -71,7 +72,8 @@ export class ScrollableContent extends React.Component {
     render(){
         const { scrollableTableContentStyles } = this.props;
         return(
-            <div ref={x => this.ref = x} style={{...scrollableTableContent(scrollableTableContentStyles), width: this.state.width}}>
+            <div ref={x => this.ref = x} style={{...scrollableTableContent(scrollableTableContentStyles), width: this.state.width}}
+                className={this.props.className}>
                 {this.props.children}
             </div>
         )
